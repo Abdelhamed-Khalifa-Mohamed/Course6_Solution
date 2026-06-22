@@ -1,0 +1,11 @@
+void ValidationForNumber(int& number)
+{
+	while (cin.fail())
+	{
+
+		cin.clear();
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		cout << "Invalid Number, Enter a valid one:" << endl;
+		cin >> number;
+	}
+}
