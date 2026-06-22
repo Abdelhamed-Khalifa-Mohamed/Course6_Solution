@@ -1,0 +1,85 @@
+#pragma once
+#include<iostream>
+using namespace std;
+namespace MyInput
+{
+	int ReadNumber()
+	{
+		int num;
+		cout << "Please Enter Number: \n";
+		cin >> num;
+		return num;
+	}
+	int ReadPositiveNumber()
+	{
+		int num;
+		do {
+			cout << "Please Enter A Positive Number: \n";
+			cin >> num;
+
+		} while (num < 0);
+		return num;
+	}
+	int ReadAge()
+	{
+		int age;
+		do {
+			cout << "Please Enter Your Age from 1 to 100: \n";
+			cin >> age;
+		} while (age <= 0 || age > 100);
+		return age;
+	}
+	int ReadNumberInRange(int From, int To)
+	{
+
+		int num;
+		do
+		{
+			cout << "Please Enter Number In Range [ " << From << " to " << To << " ]: \n";
+			cin >> num;
+		} while (num<From || num>To);
+		return num;
+
+
+
+	}
+	string ReadString(string Massage)
+	{
+		string str;
+		cout << "\n" << Massage << endl;
+		cin >> str;
+		return str;
+	}
+	void ReadArray(int arr[100], int &arrLength)
+	{
+		cout << "Please Enter The Length Of The Array: \n";
+		cin >> arrLength;
+
+		for (int i = 0; i < arrLength; i++)
+		{
+			cout << "Array [" << i + 1 << "] : ";
+			cin >> arr[i];
+		}
+
+	}
+	int ReadEvenNumber()
+	{
+		int num;
+		do
+		{
+			cout << "Please Enter An Even Number: \n";
+			cin >> num;
+		} while (num % 2 != 0);
+		return num;
+	}
+	int ReadOddNumber()
+	{
+		int num;
+		do
+		{
+			cout << "Please Enter Odd Number: \n";
+			cin >> num;
+		} while (num % 2 == 0);
+		return num;
+	}
+}
