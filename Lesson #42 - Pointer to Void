@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	void* ptr;
+	int x = 10;
+	ptr = &x;
+
+
+	cout << ptr<<endl;
+	cout << *(static_cast<int*>(ptr));
+}
