@@ -1,0 +1,29 @@
+1. Variable
+A variable stores a value directly in memory. You use its name to access or change the value.
+
+int x = 10;
+Stores the value 10.
+Has its own memory location.
+Can be changed.
+
+************************************************************************************************
+
+2. Pointer
+A pointer stores the memory address of another variable instead of storing the value itself.
+
+int x = 10;
+int* ptr = &x;
+ptr stores the address of x.
+*ptr accesses the value stored at that address.
+Can be changed to point to another variable.
+
+************************************************************************************************
+
+3. Reference
+A reference is another name (alias) for an existing variable.
+
+int x = 10;
+int& ref = x;
+ref and x refer to the same memory location.
+No new memory is created for the value.
+Cannot be changed to refer to another variable after initialization.
