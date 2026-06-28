@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+
+int main()
+{
+	int* ptrX;
+	string* ptrY;
+
+	ptrX = new int;
+	ptrY = new string;
+
+
+	*ptrX = 10;
+	*ptrY = "Mohamed";
+
+	cout << *ptrX;
+	cout << *ptrY;
+
+	delete ptrX;
+	delete ptrY;
+}
