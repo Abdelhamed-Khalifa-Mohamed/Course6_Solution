@@ -1,0 +1,16 @@
+#include <iostream>
+#include<fstream>
+using namespace std;
+int main() {
+
+	fstream MyFile;
+	MyFile.open("C:/Users/Hamedo/Desktop/File.txt", ios::out);
+	if (MyFile.is_open())
+	{
+		MyFile << "Hello To The Frist Line\n";
+		MyFile << "Iam Frist File To Open\n";
+	}
+
+
+	return 0;
+}
