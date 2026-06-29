@@ -1,0 +1,32 @@
+#include <iostream>
+#include<fstream>
+#include<vector>
+#include<string>
+using namespace std;
+
+void SaveVectorInFile(string FilePath, vector<string>VectorToSave)
+{
+	fstream File;
+	File.open(FilePath, ios::out);
+	if (File.is_open())
+	{
+		for (string& Line : VectorToSave)
+		{
+			if (Line != "")
+			{
+				File << Line<<endl;
+			}
+		}
+		File.close();
+	}
+}
+
+
+int main() {
+
+	vector <string>vFileData{ "Hamedo","Seif","Taha","Mo3taz","David","Rabi3y" };
+	SaveVectorInFile("C:/Users/Hamedo/Desktop/File.txt", vFileData);
+
+
+	return 0;
+}
